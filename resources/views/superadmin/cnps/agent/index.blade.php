@@ -131,11 +131,11 @@ button {
             <table class="table align-items-center table-flush" id="dataTable">
                 <thead class="bg-navbar text-white" style="background-color: orange">
                     <tr style="font-size: 12px">
-                        <th>Nom</th>
-                        <th>Prénoms</th>
-                        <th>Email</th>
-                        <th>Contact</th>
-                        <th>Commune</th>
+                        <th class="text-center">Nom</th>
+                        <th class="text-center">Prénoms</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Contact</th>
+                        <th class="text-center">Commune</th>
                         <th colspan="2" class="text-center">Action</th>
                     </tr>
                 </thead>
@@ -143,12 +143,12 @@ button {
                 <tbody>
                     @forelse ($agents as $agent)
                     <tr style="font-size: 12px">
-                        <td>{{ $agent->name }}</td>
-                        <td>{{ $agent->prenom }}</td>
-                        <td>{{ $agent->email }}</td>
-                        <td>{{ $agent->contact }}</td>
-                        <td>{{ $agent->commune }}</td>
-                        <td>
+                        <td  class="text-center">{{ $agent->name }}</td>
+                        <td  class="text-center">{{ $agent->prenom }}</td>
+                        <td  class="text-center">{{ $agent->email }}</td>
+                        <td  class="text-center">{{ $agent->contact }}</td>
+                        <td  class="text-center">{{ $agent->commune }}</td>
+                        <td >
                             <form action="{{ route('cnpsagent.edit', $agent->id) }}" method="GET">
                                 @csrf
                                 <button style="margin-left:50%" type="submit" ><a href="{{ route('cnpsagent.edit', $agent->id) }}" class="edit"><i class="fas fa-edit"></i></a></button>

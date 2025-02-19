@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo.png" rel="icon">
-  <title>Cnps-Dashboard</title>
+  <title>Cnps-agence-Dashboard</title>
   <link href="{{ asset("assets1/vendor/fontawesome-free/css/all.min.css") }}" rel="stylesheet" type="text/css">
   <link href="{{ asset("assets1/vendor/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css">
   <link href="{{ asset("assets1/css/ruang-admin.min.css") }}" rel="stylesheet">

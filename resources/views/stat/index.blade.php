@@ -97,8 +97,14 @@
   <!-- Boutons de téléchargement -->
   <h6 class="text-center mb-0">Télécharger les statistiques</h6>
   <div class="form-inline mb-3 justify-content-center text-center">
-    <a href="{{ route('stats.download') }}" class="btn btn-danger mx-2"><i class="fas fa-download"></i> PDF</a>
-    <a href="#" class="btn btn-success mx-2"><i class="fas fa-download"></i> Excel</a>
+    <a href="{{ route('stats.download', ['month' => $selectedMonth, 'year' => $selectedYear]) }}" class="btn btn-danger mx-2"><i class="fas fa-download"></i> PDF</a>
+
+    <form method="GET" action="{{ route('stats.index') }}" class="d-inline-block">
+        <input type="hidden" name="export_excel" value="1"> {{-- Hidden input to signal Excel export --}}
+        <input type="hidden" name="month" value="{{ $selectedMonth }}"> {{-- Pass selected month --}}
+        <input type="hidden" name="year" value="{{ $selectedYear }}">   {{-- Pass selected year --}}
+        <button type="submit" class="btn btn-success mx-2"><i class="fas fa-download"></i> Excel</button>
+    </form>
 </div>
 <div class="row mb-3">
     <!-- Statistiques des Shops -->

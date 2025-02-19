@@ -27,6 +27,7 @@ class CgraeController extends Controller
     $cgraeagent = CgraeAgent::where('communeM', $admin->siege)->count();
     $deceshops = DecesHop::count();
     $agences = AgenceCgrae::count();
+    $agents = CgraeAgent::count();
     $rechercheInfo = CgraeSearchHistory::latest()->take(7)->get();
 
     // Récupérer l'historique des recherches depuis la session avec une clé spécifique à la CGRAE
@@ -38,7 +39,8 @@ class CgraeController extends Controller
         'deceshops',
         'searchHistory',
         'agences',
-        'rechercheInfo'
+        'rechercheInfo',
+        'agents',
     ));
 }
 

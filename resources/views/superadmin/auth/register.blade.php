@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="{{ asset('assets/images/profiles/E-ci-logo.png') }}">
     <title>Inscription d'un Admin</title>
     <style>
         body {

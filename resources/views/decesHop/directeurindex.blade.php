@@ -206,25 +206,25 @@
             <table id="patients-table" class="display">
                 <thead style="text-align: center">
                     <tr>
-                        <th>N° CMD</th>
-                        <th>Nom du défunt</th>
-                        <th>Prénoms du défunt</th>
-                        <th>Date de Naissance</th>
-                        <th>Date de Décès</th>
-                        <th>Causes du Décès</th>
-                        <th>Commune de Décès</th>
+                        <th style="text-align: center">N° CMD</th>
+                        <th style="text-align: center">Nom du défunt</th>
+                        <th style="text-align: center">Prénoms du défunt</th>
+                        <th style="text-align: center">Date de Naissance</th>
+                        <th style="text-align: center">Date de Décès</th>
+                        <th style="text-align: center">Causes du Décès</th>
+                        <th style="text-align: center">Commune de Décès</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($deceshops as $deceshop)
                     <tr>
-                        <td>{{ $deceshop->codeCMD }}</td>
-                        <td>{{ $deceshop->NomM }}</td>
-                        <td>{{ $deceshop->PrM }}</td>
-                        <td>{{ $deceshop->DateNaissance }}</td>
-                        <td>{{ $deceshop->DateDeces }}</td>
-                        <td>{{ $deceshop->Remarques }}</td>
-                        <td>{{ $deceshop->commune }}</td>
+                        <td style="text-align: center">{{ $deceshop->codeCMD }}</td>
+                        <td style="text-align: center">{{ $deceshop->NomM }}</td>
+                        <td style="text-align: center">{{ $deceshop->PrM }}</td>
+                        <td style="text-align: center">{{ $deceshop->DateNaissance }}</td>
+                        <td style="text-align: center">{{ $deceshop->DateDeces }}</td>
+                        <td style="text-align: center">{{ $deceshop->Remarques }}</td>
+                        <td style="text-align: center">{{ $deceshop->commune }}</td>
                     </tr>
                     @empty
                     <tr>

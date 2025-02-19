@@ -17,8 +17,13 @@
   {{-- Fin de l'ajout du logo --}}
 
       <li class="ms-nav-item ms-nav-user dropdown">
-          <a href="#" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
-              <img class="ms-user-img ms-img-round float-right" style="width: 50px; height: 40px; border-radius: 50%; object-fit: cover;" src="{{ asset('storage/' . (Auth::guard('directeur')->user()->profile_picture ?? 'default-profile.png')) }}" alt="Profile Picture">
+        <a href="#" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="profile-container" style="display: flex; align-items: center;">
+              <img class="ms-user-img ms-img-round" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 10px;" src="{{ asset('storage/' . (Auth::guard('directeur')->user()->profile_picture ?? 'default-profile.png')) }}" alt="Profile Picture">
+              <span style="color: white; font-weight: bold;">
+                Dr. {{ Auth::guard('directeur')->user()->name }} 
+              </span>
+            </div>
           </a>
           <ul class="dropdown-menu dropdown-menu-right user-dropdown" aria-labelledby="userDropdown">
               <li class="dropdown-menu-header">

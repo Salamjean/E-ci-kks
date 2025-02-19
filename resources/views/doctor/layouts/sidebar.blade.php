@@ -14,7 +14,7 @@
       <!-- Dashboard -->
       <li class="menu-item">
         <a href="#" class="has-chevron" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
-          <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
+          <span><i class="material-icons fs-16">dashboard</i>Tableau de board </span>
         </a>
         <ul id="dashboard" class="collapse" aria-labelledby="dashboard" data-parent="#side-nav-accordion">
           <li> <a href="{{ route('doctor.dashboard') }}">E-Côte d'Ivoire</a> </li>

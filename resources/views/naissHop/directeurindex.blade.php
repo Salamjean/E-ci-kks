@@ -206,23 +206,23 @@
             <table id="patients-table" class="display">
                 <thead style="text-align: center">
                     <tr>
-                        <th>N° CMN</th>
-                        <th>Nom de la mère</th>
-                        <th>Nom de l'accompagnateur</th>
-                        <th>Hôpital</th>
-                        <th>N°CMU de la mère</th>
-                        <th>Date de Naissance</th>
+                        <th style="text-align: center">N° CMN</th>
+                        <th style="text-align: center">Nom de la mère</th>
+                        <th style="text-align: center">Nom de l'accompagnateur</th>
+                        <th style="text-align: center">Hôpital</th>
+                        <th style="text-align: center">N°CMU de la mère</th>
+                        <th style="text-align: center">Date de Naissance</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($naisshops as $naisshop)
                     <tr>
-                        <td>{{ $naisshop->codeCMN }}</td>
-                        <td>{{ $naisshop->NomM . ' ' . $naisshop->PrM }}</td>
-                        <td>{{ $naisshop->NomP . ' ' . $naisshop->PrP }}</td>
-                        <td>{{ $naisshop->NomEnf . ' ' . $naisshop->preEnf }}</td>
-                        <td>{{ $naisshop->codeCMU }}</td>
-                        <td>{{ $naisshop->DateNaissance }}</td>
+                        <td style="text-align: center">{{ $naisshop->codeCMN }}</td>
+                        <td style="text-align: center">{{ $naisshop->NomM . ' ' . $naisshop->PrM }}</td>
+                        <td style="text-align: center">{{ $naisshop->NomP . ' ' . $naisshop->PrP }}</td>
+                        <td style="text-align: center">{{ $naisshop->NomEnf . ' ' . $naisshop->preEnf }}</td>
+                        <td style="text-align: center">{{ $naisshop->codeCMU }}</td>
+                        <td style="text-align: center">{{ $naisshop->DateNaissance }}</td>
                     </tr>
                     @empty
                     <tr>

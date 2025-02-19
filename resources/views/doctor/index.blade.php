@@ -201,7 +201,7 @@
         </div>
 
         <div class="container">
-            <h1>Liste Des Docteurs De L'Hôpital</h1>
+            <h1>Liste des docteurs de l'hôpital</h1>
             <div class="header">
                 <div class="search-bar">
                     <input type="text" id="search" placeholder="Rechercher un docteur...">
@@ -212,23 +212,23 @@
             <table id="patients-table" class="display">
                 <thead class="text-center">
                     <tr>
-                        <th>Nom</th>
-                        <th>Prénoms</th>
-                        <th>Email</th>
-                        <th>Description</th>
-                        <th>Contact</th>
-                        <th>Action</th>
+                        <th class="text-center">Nom</th>
+                        <th class="text-center">Prénoms</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Description</th>
+                        <th class="text-center">Contact</th>
+                        <th class="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($sousadmins as $sousadmin)
                     <tr class="text-center">
-                        <td>{{ $sousadmin->name }}</td>
-                        <td>{{ $sousadmin->prenom }}</td>
-                        <td>{{ $sousadmin->email }}</td>
-                        <td>{{ $sousadmin->description }}</td>
-                        <td>{{ $sousadmin->contact }}</td>
-                        <td>
+                        <td class="text-center">{{ $sousadmin->name }}</td>
+                        <td class="text-center">{{ $sousadmin->prenom }}</td>
+                        <td class="text-center">{{ $sousadmin->email }}</td>
+                        <td class="text-center">{{ $sousadmin->description }}</td>
+                        <td class="text-center">{{ $sousadmin->contact }}</td>
+                        <td class="text-center" >
                             <button class="edit"><a href="{{ route('doctor.edit', $sousadmin->id) }}" class="edit"><i class="fas fa-edit"></i></a></button>
                             <button class="delete"><a href="{{ route('doctor.delete', $sousadmin->id) }}" class="delete"><i class="fas fa-trash"></i></a></button>
                         </td>

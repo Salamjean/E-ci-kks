@@ -6,7 +6,7 @@
         height: 70px; /* Taille du cercle */
         border-radius: 55%; /* Cela rend l'image ronde */
         object-fit: cover;" src="{{ asset('storage/' . (Auth::guard('directeur')->user()->profile_picture ?? 'default-profile.png')) }}" alt="Profile Picture"></a>
-      <h5 class="text-center text-white mt-2">{{ Auth::guard('directeur')->user()->name ?? 'Alain'  }}</h5>
+      <h5 class="text-center text-white mt-2">{{ Auth::guard('directeur')->user()->name  }} {{ Auth::guard('directeur')->user()->prenom  }}</h5>
       
     </div>
     <!-- Navigation -->
@@ -14,7 +14,7 @@
       <!-- Dashboard -->
       <li class="menu-item">
         <a href="#" class="has-chevron" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
-          <span><i class="material-icons fs-16">dashboard</i>Dashboard </span>
+          <span><i class="material-icons fs-16">dashboard</i>Tableau de board </span>
         </a>
         <ul id="dashboard" class="collapse" aria-labelledby="dashboard" data-parent="#side-nav-accordion">
           <li> <a href="{{ route('directeur.dashboard') }}">E-Côte d'Ivoire</a> </li>

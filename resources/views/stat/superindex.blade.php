@@ -79,7 +79,7 @@
                         <p class="ms-card-change">{{ $naisshop }}</p>
                     </div>
                 </div>
-                <i class="fas fa-user ms-icon-mr"></i>
+                <i class="fas fa-child ms-icon-mr"></i>
             </div>
         </a>
     </div>
@@ -93,7 +93,7 @@
                         <p class="ms-card-change">{{ $deceshop }}</p>
                     </div>
                 </div>
-                <i class="fa fa-skull ms-icon-mr"></i>
+                <i class="fa fa-church ms-icon-mr"></i>
             </div>
         </a>
     </div>
@@ -116,7 +116,6 @@
   <h6 class="text-center mb-0">Télécharger les statistiques</h6>
   <div class="form-inline mb-3 justify-content-center text-center">
     <a href="{{ route('stats.superdownload') }}" class="btn btn-danger mx-2"><i class="fas fa-download"></i> PDF</a>
-    <a href="#" class="btn btn-success mx-2"><i class="fas fa-download"></i> Excel</a>
 </div>
 <div class="row mb-3">
     <!-- Statistiques des Shops -->

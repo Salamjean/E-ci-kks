@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ asset('assets/images/profiles/E-ci-logo.png') }}">
     <link rel="stylesheet" href="Style.css">
     <title>Connexion d'un Admin</title>
     <style>

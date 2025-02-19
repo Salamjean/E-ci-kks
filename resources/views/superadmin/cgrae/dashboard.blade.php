@@ -26,7 +26,7 @@
                             <div class="col-sm-4">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h3 class="card-title text-center" style="font-size: 20px;">Nombre total d'agent</h3>
+                                        <h3 class="card-title text-center" style="font-size: 20px;">Nombre total d'agence</h3>
                                         <div class="text-center">
                                             <i class="fa fa-home d-block" style="font-size: 30px; color:green"></i>
                                         </div>
@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <h1 class="display-4  text-center">{{ $cgraeagent }}</h1>
+                                        <h1 class="display-4  text-center">{{ $agents }}</h1>
                                     </div>
                                 </div>
                             </div>

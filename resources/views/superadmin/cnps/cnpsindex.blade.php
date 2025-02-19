@@ -24,14 +24,14 @@
             <table class="table align-items-center table-flush" id="dataTable">
                 <thead class="bg-navbar text-white" style="background-color: orange">
                     <tr style="font-size: 12px">
-                        <th>N° CMD</th>
-                        <th>Hôpital</th>
-                        <th>Commune</th>
-                        <th>Nom du défunt</th>
-                        <th>Date de naissance</th>
-                        <th>Date de décès</th>
-                        <th>Date et Heure de déclaration</th>
-                        <th>Nom du docteur</th>
+                        <th class="text-center">N° CMD</th>
+                        <th class="text-center">Hôpital</th>
+                        <th class="text-center">Commune</th>
+                        <th class="text-center">Nom du défunt</th>
+                        <th class="text-center">Date de naissance</th>
+                        <th class="text-center">Date de décès</th>
+                        <th class="text-center">Date et Heure de déclaration</th>
+                        <th class="text-center">Nom du docteur</th>
                     </tr>
                 </thead>
                 

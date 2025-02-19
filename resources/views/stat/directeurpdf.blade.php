@@ -88,7 +88,7 @@
             </div>
         </div>
         <br><br><br><br><br><br><br><br>
-        <h1 class="tete">{{ $hopitalName }}</h1>
+        <h1 class="tete">{{ $communeAdmin }}</h1>
     </header>
     <main>
         <h1 style="text-align: center">Statistiques</h1>

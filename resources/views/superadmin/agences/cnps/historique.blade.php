@@ -106,8 +106,8 @@
                                     @foreach($rechercheInfo as $history)
                                         <tr class="text-center">
                                             <td>{{ $history->agent_name }} {{ $history->agent_prenom }}</td>
-                                            <td>{{ $history->defunt_nom }} {{ $history->defunt_prenom }}</td>
-                                            <td>{{ $history->codeCMD }}</td>
+                                            <td>{{ $history->defunt_nom ? $history->defunt_nom : 'Défunt non trouvé' }} {{ $history->defunt_prenom }}</td>
+                                            <td>{{ $history->codeCMD ? $history->codeCMD : 'Défunt non trouvé' }}</td>
                                             <td>{{ $history->search_term }}</td>
                                             <td>{{ $history->created_at }}</td>
                                         </tr>

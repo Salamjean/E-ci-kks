@@ -30,7 +30,7 @@
                             <p class="ms-card-change">{{ $naisshop }}</p>
                         </div>
                     </div>
-                    <i class="fas fa-user ms-icon-mr"></i>
+                    <i class="fas fa-child ms-icon-mr"></i>
                 </div>
             </a>
         </div>
@@ -44,7 +44,7 @@
                             <p class="ms-card-change">{{ $deceshop }}</p>
                         </div>
                     </div>
-                    <i class="fa fa-skull ms-icon-mr"></i>
+                    <i class="fa fa-church ms-icon-mr"></i>
                 </div>
             </a>
         </div>

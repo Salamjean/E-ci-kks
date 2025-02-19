@@ -205,12 +205,12 @@
         
             <table id="patients-table" class="display">
                 <thead class="text-center">
-                    <tr>
-                        <th>Nom</th>
-                        <th>Prénoms</th>
-                        <th>Email</th>
-                        <th>Description</th>
-                        <th>Contact</th>
+                    <tr class="text-center">
+                        <th class="text-center">Nom</th>
+                        <th class="text-center">Prénoms</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Description</th>
+                        <th class="text-center">Contact</th>
                     </tr>
                 </thead>
                 <tbody>
