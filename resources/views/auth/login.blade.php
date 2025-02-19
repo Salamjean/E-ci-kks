@@ -123,12 +123,12 @@
       <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
         <h1 class="creer">Créez votre compte</h1>
-        <input type="text" name="name" placeholder="Votre nom" required />
-        <input type="text" name="prenom" placeholder="Votre prénom" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="password" name="password" placeholder="Mot de passe" required />
+        <input type="text" name="name" placeholder="Votre nom" value="{{ old('name') }}" required />
+        <input type="text" name="prenom" placeholder="Votre prénom" value="{{ old('prenom') }}" required />
+        <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required />
+        <input type="password" name="password" value="{{ old('password') }}" placeholder="Mot de passe" required />
         <input type="password" name="password_confirmation" placeholder="Confirmer le mot de passe" required />
-        <select id="commune" name="commune" class="block mt-1 w-full" required>
+        <select id="commune" name="commune" class="block mt-1 w-full" value="{{ old('commune') }}" required>
             <option value="">Sélectionnez votre commune de naisance</option>
             <option value="abobo">Abobo</option>
             <option value="adjame">Adjamé</option>
@@ -204,7 +204,7 @@
             <option value="bofora">Bofora</option>
             <option value="zagoua">Zagoua</option>
         </select>
-        <input type="text" name="CMU" placeholder="Entrez votre numéro CMU" required />
+        <input type="text" name="CMU" placeholder="Entrez votre numéro CMU" value="{{ old('CMU') }}" required />
         <div class="flex-column">
           <label>Photo de Profil</label>
       <div class="inputForm mb-3">
