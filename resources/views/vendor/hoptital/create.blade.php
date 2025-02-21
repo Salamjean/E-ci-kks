@@ -117,23 +117,35 @@
         <!-- Formulaire principal -->
         <div class="form-row mb-3">
             <div class="col-md-6">
-                <label for="validationCustom001" class="form-label">Nom et prénoms de l'administrateur</label>
+                <label for="validationCustom001" class="form-label">Nom et prénoms de l'administrateur <span style="color:red">*</span></label>
                 <input type="text" class="form-control" name="name" id="validationCustom001" placeholder="Entrez le nom de l'administrateur" required>
-               
+                @error('name')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
 
             <div class="col-md-6">
-                <label for="validationCustom002" class="form-label">Email de l'hôpital</label>
+                <label for="validationCustom002" class="form-label">Email de l'hôpital <span style="color:red">*</span></label>
                 <input type="email" class="form-control" name="email" id="validationCustom002" placeholder="Entrez l'email de l'hôpital" required>
-                
+                @error('email')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
         </div>
 
         <div class="form-row mb-3">
             <div class="col-md-6">
-                <label for="validationCustom003" class="form-label">Contact de l'hôpital</label>
+                <label for="validationCustom003" class="form-label">Contact de l'hôpital <span style="color:red">*</span></label>
                 <input type="text" class="form-control" name="contact" id="validationCustom003" placeholder="Entrez le contact de l'hôpital" required>
-               
+                @error('contact')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
 
             <div class="col-md-6">
@@ -144,7 +156,7 @@
 
         <div class="form-row mb-3">
             <div class="col-md-6">
-                <label for="validationCustom005" class="form-label">Type</label>
+                <label for="validationCustom005" class="form-label">Type <span style="color:red">*</span></label>
                 <select class="form-control" name="type" id="validationCustom005" required>
                     <option value="" disabled selected>Choisissez le type d'hôpital...</option>
                     <option value="hôpital-general">Hôpital Général</option>
@@ -153,11 +165,20 @@
                     <option value="chu">CHU</option>
                     <option value="fsu">FSU</option>
                 </select>
+                @error('type')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="col-md-6">
-                <label for="validationCustom005" class="form-label">Nom de l'hôpital</label>
+                <label for="validationCustom005" class="form-label">Nom de l'hôpital <span style="color:red">*</span></label>
                 <input type="text" class="form-control" name="nomHop" id="validationCustom005" placeholder="Entrez le nom de l'hôpital" required>
-               
+                @error('nomHop')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
         </div>
 

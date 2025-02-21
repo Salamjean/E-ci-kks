@@ -82,7 +82,7 @@
         @endphp
         <img class="img-profile rounded-circle" src="{{ asset('assets/images/profiles/' . $image) }}" 
              alt="Logo {{ $user->communeM }}">
-        <span class="ml-2 d-none d-lg-inline text-white small">Mairie de {{ $user->communeM }}</span>
+        <span class="ml-2 d-none d-lg-inline text-white small"> Agent: {{ $user->name. ' ' .$user->prenom }}</span>
       </a>
       </a>
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

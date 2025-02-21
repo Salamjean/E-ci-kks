@@ -1,7 +1,7 @@
 <aside id="ms-side-nav" class="side-nav fixed ms-aside-scrollable ms-aside-left">
     <!-- Logo -->
     <div class="logo-sn ms-d-block-lg">
-      <div style="background-color:azure; margin-top:10px"><a class="pl-0 ml-0 text-center" href="index.html"> {{ Auth::guard('doctor')->user()->nomHop }} </a></div><br>
+      <div style="background-color:azure; margin-top:10px"><a class="pl-0 ml-0 text-center" href="{{ route('doctor.dashboard') }}"> {{ Auth::guard('doctor')->user()->nomHop }} </a></div><br>
       <a href="{{ route('doctor.dashboard') }}" class="text-center ms-logo-img-link"> <img class="ms-user-img ms-img-round" style=" width: 70px; /* Taille du cercle */
         height: 70px; /* Taille du cercle */
         border-radius: 55%; /* Cela rend l'image ronde */

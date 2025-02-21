@@ -1,20 +1,20 @@
 <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!-- Bouton Sidebar -->
-
+  @php
+          $user = Auth::guard('caisse')->user();
+        @endphp
   <!-- Icônes du Topbar -->
+  <h6 style="color: white; font-weight:bold">Mairie : {{ strtoupper(Auth::guard('caisse')->user()->communeM) }}</h6>
   <ul class="navbar-nav ml-auto align-items-center">
     <!-- Notifications -->
-
 
     <!-- Profil Utilisateur -->
     <li class="nav-item dropdown no-arrow">
       <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" 
          aria-haspopup="true" aria-expanded="false">
         <!-- Image selon la ville -->
-        @php
-          $user = Auth::guard('caisse')->user();
-        @endphp
+      
         <img class="img-profile rounded-circle" src="{{ asset('storage/' . (Auth::guard('caisse')->user()->profile_picture ?? 'default-profile.png')) }}" >
         <span class="ml-2 d-none d-lg-inline text-white small">{{ $user->name }} {{ $user->prenom }}</span>
       </a>

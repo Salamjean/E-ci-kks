@@ -1,5 +1,5 @@
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('agent.vue') }}">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('ajoint.dashboard') }}">
     <div>
       <img src="{{ asset('assets/images/profiles/E-ci-logo.png') }}" style="height:70px" class="mr-7">
     </div>

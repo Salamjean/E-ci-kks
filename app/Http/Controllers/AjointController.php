@@ -32,15 +32,27 @@ class AjointController extends Controller
 
      public function ajointstore(Request $request){
         // Validation des données
-       
         $request->validate([
            'name' => 'required|string|max:255',
            'prenom' => 'required|string|max:255',
-           'email' => 'required|email|unique:agents,email',
-           'contact' => 'required|string|min:10',
+           'email' => 'required|email|unique:ajoints,email',
+           'contact' => 'required|string|max:10',
            'commune' => 'required|string|max:255',
-           'profile_picture' => 'nullable|image|max:2048',
        
+       ],[
+        'name.required' => 'Le nom est requis.',
+        'name.string' => 'Le nom doit être une chaîne de caractères.',
+        'name.max' => 'Le nom ne doit pas dépasser 255 caractères.',
+        'prenom.required' => 'Le prénom est requis.',
+        'prenom.string' => 'Le prénom doit être une chaîne de caractères.',
+        'prenom.max' => 'Le prénom ne doit pas dépasser 255 caractères.',
+        'email.required' => 'L\'e-mail est requis.',
+        'email.email' => 'L\'e-mail n\'est pas valide.',
+        'email.unique' => 'Cet e-mail est déjà utilisé.',
+        'contact.required' => 'Le numéro de contact est requis.',
+        'contact.max' => 'Le numéro de contact ne doit pas dépasser 10 chiffres.',
+        'commune.required' => 'La commune est requise.',
+        'commune.string' => 'La commune doit être une chaîne de caractères.',
        ]);
        try {
            // Récupérer le vendor connecté
@@ -48,7 +60,7 @@ class AjointController extends Controller
            if (!$vendor || !$vendor->name) {
                return redirect()->back()->withErrors(['error' => 'Impossible de récupérer les informations du vendor.']);
            }
-           // Création du docteur
+           // Création de l'ajoint au maire
            $ajoint = new Ajoint();
            $ajoint->name = $request->name;
            $ajoint->prenom = $request->prenom;
@@ -299,7 +311,7 @@ class AjointController extends Controller
                 'code'=>'required|exists:reset_code_password_ajoints,code',
                 'password' => 'required|same:confirme_password',
                 'confirme_password' => 'required|same:password',
-                'profile_picture' => 'required'
+                
             ], [
                 'code.exists' => 'Le code de réinitialisation est invalide.',
                 'code.required' => 'Le code de réinitialisation est obligatoire verifié votre mail.',
@@ -307,7 +319,6 @@ class AjointController extends Controller
                 'password.same' => 'Les mots de passe doivent être identiques.',
                 'confirme_password.same' => 'Les mots de passe doivent être identiques.',
                 'confirme_password.required' => 'Le mot de passe de confirmation est obligatoire.',
-                'profile_picture.required' => 'Votre photo de profil est obligatoire',
         ]);
         try {
             $ajoint = Ajoint::where('email', $request->email)->first();

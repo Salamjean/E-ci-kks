@@ -50,11 +50,27 @@ class CaisseController extends Controller
         $request->validate([
            'name' => 'required|string|max:255',
            'prenom' => 'required|string|max:255',
-           'email' => 'required|email|unique:agents,email',
+           'email' => 'required|email|unique:caisses,email',
            'contact' => 'required|string|min:10',
            'commune' => 'required|string|max:255',
            'profile_picture' => 'nullable|image|max:2048',
        
+       ],[
+              'name.required' => 'Le nom est obligatoire.',
+              'name.string' => 'Le nom doit être une chaîne de caractères.',
+              'name.max' => 'Le nom ne doit pas dépasser :max caractères.',
+              'prenom.required' => 'Le prénom est obligatoire.',
+              'prenom.string' => 'Le prénom doit être une chaîne de caractères.',
+              'prenom.max' => 'Le prénom ne doit pas dépasser :max caractères.',
+              'email.required' => 'L\'adresse mail est obligatoire.',
+              'email.email' => 'L\'adresse mail doit être valide.',
+              'email.unique' => 'L\'adresse mail est déjà utilisée.',
+              'contact.required' => 'Le contact est obligatoire.',
+              'contact.string' => 'Le contact doit être une chaîne de caractères.',
+              'contact.min' => 'Le contact doit avoir au moins :min caractères.',
+              'commune.required' => 'La commune est obligatoire.',
+              'commune.string' => 'La commune doit être une chaîne de caractères.',
+              'commune.max' => 'La commune ne doit pas dépasser :max caractères.',
        ]);
    
        try {
@@ -239,7 +255,7 @@ class CaisseController extends Controller
                 'code'=>'required|exists:reset_code_password_caisses,code',
                 'password' => 'required|same:confirme_password',
                 'confirme_password' => 'required|same:password',
-                'profile_picture' => 'required'
+                
             ], [
                 'code.exists' => 'Le code de réinitialisation est invalide.',
                 'code.required' => 'Le code de réinitialisation est obligatoire verifié votre mail.',
@@ -247,7 +263,7 @@ class CaisseController extends Controller
                 'password.same' => 'Les mots de passe doivent être identiques.',
                 'confirme_password.same' => 'Les mots de passe doivent être identiques.',
                 'confirme_password.required' => 'Le mot de passe de confirmation est obligatoire.',
-                'profile_picture.required' => 'Votre photo de profil est obligatoire',
+                
         ]);
         try {
             $caisse = Caisse::where('email', $request->email)->first();
