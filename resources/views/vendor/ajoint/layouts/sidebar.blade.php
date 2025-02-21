@@ -17,7 +17,7 @@
   <hr class="sidebar-divider">
 
   <div class="sidebar-heading" style="font-size: 15px; text-align:center">
-    Les Demandes
+    Les Demandes effectuées
   </div>
 
   <li class="nav-item" style="font-size: 15px; text-align:center">
